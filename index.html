@@ -14,20 +14,42 @@
 
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       background: #0b1d3a;
-      overflow: hidden;
+      font-family: Arial, sans-serif;
+      gap: 30px;
     }
 
     .wrapper {
-      transform: scale(1.5);
+      transform: scale(1.8);
       transform-origin: center;
+    }
+
+    .santa-btn {
+      font-size: 22px;
+      padding: 15px 30px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: #e63946;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .santa-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Countdown -->
   <div class="wrapper">
     <iframe
       src="https://www.noradsanta.org/countdownClock.html"
@@ -38,8 +60,17 @@
       title="NORAD Santa Countdown">
     </iframe>
   </div>
+
+  <!-- Santa Map Button -->
+  <button
+    class="santa-btn"
+    onclick="window.open('https://www.noradsanta.org/', '_blank')">
+    🎅 Track Santa LIVE
+  </button>
+
 </body>
 </html>
+
 
 
 
