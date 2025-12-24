@@ -1,77 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Santa Tracker DEBUG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #8b0000;
-      font-family: Arial, sans-serif;
-      gap: 25px;
-      transition: background 0.3s;
-    }
-
-    .iframe-wrapper {
-      transform: scale(1.6);
-      transform-origin: center;
-      pointer-events: none;
-    }
-
-    .iframe-wrapper iframe {
-      pointer-events: auto;
-    }
-
-    button {
-      z-index: 9999;
-      font-size: 24px;
-      padding: 18px 36px;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      background: limegreen;
-      color: black;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body id="page">
-
-  <div class="iframe-wrapper">
-    <iframe
-      src="https://www.noradsanta.org/countdownClock.html"
-      width="400"
-      height="232"
-      title="NORAD Countdown">
-    </iframe>
-  </div>
-
-  <button onclick="debugClick()">
-    🎅 DEBUG: CLICK ME
-  </button>
-
-  <script>
-    function debugClick() {
-      document.getElementById("page").style.background = "green";
-      alert("✅ BUTTON CLICK REGISTERED");
-      window.open("https://www.noradsanta.org/", "_blank", "noopener");
-    }
-  </script>
-
+<html>
+<body style="background:red; color:white; font-size:40px;">
+  IF YOU SEE THIS, GITHUB PAGES UPDATED
 </body>
 </html>
+
 
 
 
