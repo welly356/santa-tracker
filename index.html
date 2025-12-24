@@ -22,12 +22,19 @@
       gap: 30px;
     }
 
-    .wrapper {
+    .iframe-wrapper {
       transform: scale(1.8);
       transform-origin: center;
+      pointer-events: none; /* 👈 important */
+    }
+
+    .iframe-wrapper iframe {
+      pointer-events: auto; /* allow iframe interaction */
     }
 
     .santa-btn {
+      position: relative;
+      z-index: 10; /* 👈 force above iframe */
       font-size: 22px;
       padding: 15px 30px;
       border-radius: 12px;
@@ -50,7 +57,7 @@
 <body>
 
   <!-- Countdown -->
-  <div class="wrapper">
+  <div class="iframe-wrapper">
     <iframe
       src="https://www.noradsanta.org/countdownClock.html"
       width="400"
@@ -61,15 +68,16 @@
     </iframe>
   </div>
 
-  <!-- Santa Map Button -->
+  <!-- Button -->
   <button
     class="santa-btn"
-    onclick="window.open('https://www.noradsanta.org/', '_blank')">
+    onclick="window.open('https://www.noradsanta.org/', '_blank', 'noopener')">
     🎅 Track Santa LIVE
   </button>
 
 </body>
 </html>
+
 
 
 
