@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Santa Tracker</title>
+  <title>Santa Tracker DEBUG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -17,68 +17,61 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #0b1d3a;
+      background: #8b0000;
       font-family: Arial, sans-serif;
-      gap: 30px;
+      gap: 25px;
+      transition: background 0.3s;
     }
 
     .iframe-wrapper {
-      transform: scale(1.8);
+      transform: scale(1.6);
       transform-origin: center;
-      pointer-events: none; /* 👈 important */
+      pointer-events: none;
     }
 
     .iframe-wrapper iframe {
-      pointer-events: auto; /* allow iframe interaction */
+      pointer-events: auto;
     }
 
-    .santa-btn {
-      position: relative;
-      z-index: 10; /* 👈 force above iframe */
-      font-size: 22px;
-      padding: 15px 30px;
-      border-radius: 12px;
+    button {
+      z-index: 9999;
+      font-size: 24px;
+      padding: 18px 36px;
+      border-radius: 14px;
       border: none;
       cursor: pointer;
-      background: #e63946;
-      color: white;
+      background: limegreen;
+      color: black;
       font-weight: bold;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .santa-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
   </style>
 </head>
 
-<body>
+<body id="page">
 
-  <!-- Countdown -->
   <div class="iframe-wrapper">
     <iframe
       src="https://www.noradsanta.org/countdownClock.html"
       width="400"
       height="232"
-      frameborder="0"
-      scrolling="no"
-      title="NORAD Santa Countdown">
+      title="NORAD Countdown">
     </iframe>
   </div>
 
-  <!-- Button -->
-  <button
-    class="santa-btn"
-    onclick="window.open('https://www.noradsanta.org/', '_blank', 'noopener')">
-    🎅 Track Santa LIVE
+  <button onclick="debugClick()">
+    🎅 DEBUG: CLICK ME
   </button>
+
+  <script>
+    function debugClick() {
+      document.getElementById("page").style.background = "green";
+      alert("✅ BUTTON CLICK REGISTERED");
+      window.open("https://www.noradsanta.org/", "_blank", "noopener");
+    }
+  </script>
 
 </body>
 </html>
-
-
 
 
 
