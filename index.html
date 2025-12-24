@@ -1,9 +1,83 @@
 <!DOCTYPE html>
-<html>
-<body style="background:red; color:white; font-size:40px;">
-  IF YOU SEE THIS, GITHUB PAGES UPDATED
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Santa Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #0b1d3a;
+      font-family: Arial, sans-serif;
+      gap: 30px;
+    }
+
+    .iframe-wrapper {
+      transform: scale(1.8);
+      transform-origin: center;
+      pointer-events: none;
+    }
+
+    .iframe-wrapper iframe {
+      pointer-events: auto;
+    }
+
+    .santa-btn {
+      position: relative;
+      z-index: 10;
+      font-size: 22px;
+      padding: 15px 30px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: #e63946;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .santa-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Countdown -->
+  <div class="iframe-wrapper">
+    <iframe
+      src="https://www.noradsanta.org/countdownClock.html"
+      width="400"
+      height="232"
+      frameborder="0"
+      scrolling="no"
+      title="NORAD Santa Countdown">
+    </iframe>
+  </div>
+
+  <!-- Santa Map Button -->
+  <button
+    class="santa-btn"
+    onclick="window.open('https://www.noradsanta.org/', '_blank', 'noopener')">
+    🎅 Track Santa LIVE
+  </button>
+
 </body>
 </html>
+
 
 
 
