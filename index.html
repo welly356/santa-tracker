@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Santa Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+    }
+
+    .scale-box {
+      transform: scale(1.8);
+      transform-origin: top left;
+    }
+  </style>
 </head>
 
-<body style="
-  margin:0;
-  width:100vw;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#0b1d3a;
-">
-
-  <iframe
-    src="https://www.noradsanta.org/countdownClock.html"
-    style="
-      width:400px;
-      height:232px;
-      border:none;
-      transform:scale(1.6);
-      transform-origin:center;
-    "
-    title="NTS Countdown Clock">
-  </iframe>
-
+<body>
+  <div class="scale-box">
+    <iframe
+      src="https://www.noradsanta.org/countdownClock.html"
+      width="400"
+      height="232"
+      frameborder="0"
+      scrolling="no"
+      title="NTS Countdown Clock">
+    </iframe>
+  </div>
 </body>
 </html>
+
 
 
