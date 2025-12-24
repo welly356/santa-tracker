@@ -13,31 +13,34 @@
     }
 
     body {
-      display: grid;
-      place-items: center;
-      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0b1d3a;
+      overflow: hidden;
     }
 
-    .scale-box {
-      transform: scale(1.8);
-      transform-origin: top left;
+    .wrapper {
+      transform: scale(2);
+      transform-origin: center;
     }
   </style>
 </head>
 
 <body>
-  <div class="scale-box">
+  <div class="wrapper">
     <iframe
       src="https://www.noradsanta.org/countdownClock.html"
       width="400"
       height="232"
       frameborder="0"
       scrolling="no"
-      title="NTS Countdown Clock">
+      title="NORAD Santa Countdown">
     </iframe>
   </div>
 </body>
 </html>
+
 
 
 
